@@ -4,7 +4,6 @@ using System;
 
 namespace ApplicantTracking.Application.Commands.Create;
 
-// Validates the input DTO used by the CreateCandidate command (kept as DTO validation to integrate with ASP.NET auto-validation).
 public sealed class CreateCandidateCommandValidator : AbstractValidator<CreateCandidateDto>
 {
     public CreateCandidateCommandValidator()

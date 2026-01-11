@@ -37,8 +37,6 @@ public sealed class CandidateRepository : Repository<Candidate>, ICandidateRepos
     {
         if (string.IsNullOrWhiteSpace(email)) return Task.FromResult(false);
 
-        // Candidate.Email is normalized to lowercase on write (domain rule).
-        // We also normalize here to match stored values.
         var normalized = email.Trim().ToLowerInvariant();
 
         return DbContext.Candidates

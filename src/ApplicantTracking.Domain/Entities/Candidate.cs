@@ -4,7 +4,7 @@ namespace ApplicantTracking.Domain.Entities;
 
 public sealed class Candidate
 {
-    private Candidate() { } // EF
+    private Candidate() { }
 
     public Candidate(string name, string surename, DateTime birthdate, string email)
     {
@@ -51,7 +51,6 @@ public sealed class Candidate
 
     private void SetBirthdate(DateTime value)
     {
-        // Keep it simple: just ensure it's not a future date.
         if (value.Date > DateTime.UtcNow.Date) throw new ArgumentException("Birthdate cannot be in the future.", nameof(value));
         Birthdate = value;
     }

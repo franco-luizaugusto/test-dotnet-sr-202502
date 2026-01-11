@@ -20,8 +20,6 @@ public sealed class TimelineConfiguration : IEntityTypeConfiguration<Timeline>
         builder.Property(x => x.NewData).HasColumnType("varchar(max)").IsRequired(false);
 
         builder.Property(x => x.CreatedAt).IsRequired();
-
-        // Important: NO FK relationship to candidates; we keep audit history even after deletes.
     }
 }
 
