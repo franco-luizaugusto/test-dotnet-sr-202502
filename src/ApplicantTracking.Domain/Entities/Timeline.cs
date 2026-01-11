@@ -4,7 +4,7 @@ namespace ApplicantTracking.Domain.Entities;
 
 public sealed class Timeline
 {
-    private Timeline() { } // EF
+    private Timeline() { }
 
     public Timeline(int idAggregateRoot, byte idTimelineType, string? oldData, string? newData)
     {

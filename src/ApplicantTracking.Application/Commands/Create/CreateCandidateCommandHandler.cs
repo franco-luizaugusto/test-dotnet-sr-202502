@@ -42,7 +42,6 @@ public sealed class CreateCandidateCommandHandler : IRequestHandler<CreateCandid
 
         await using var tx = await _uow.BeginTransactionAsync(cancellationToken);
 
-        // Save to generate identity (IdCandidate)
         await _uow.SaveChangesAsync(cancellationToken);
 
         var newData = JsonSerializer.Serialize(candidate);

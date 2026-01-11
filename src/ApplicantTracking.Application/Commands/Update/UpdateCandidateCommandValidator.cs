@@ -4,7 +4,6 @@ using System;
 
 namespace ApplicantTracking.Application.Commands.Update;
 
-// Validates the input DTO used by the UpdateCandidate command (kept as DTO validation to integrate with ASP.NET auto-validation).
 public sealed class UpdateCandidateCommandValidator : AbstractValidator<UpdateCandidateDto>
 {
     public UpdateCandidateCommandValidator()
